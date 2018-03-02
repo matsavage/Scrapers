@@ -19,7 +19,7 @@ PARAMS = {'division': 1,
           'scaled': 0,
           'sort': 0,
           'occupation': 0,
-          'page': 4410}
+          'page': 1}
 
 def process_json(json):
     iter_scores = []
