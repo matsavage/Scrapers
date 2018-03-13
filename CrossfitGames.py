@@ -41,7 +41,7 @@ def scrape_crossfit(count=False):
         try:
             from mlxtend.utils import Counter
         except ImportError:
-            print('Error')
+            print('Cannot import counter, continuing without')
             count = False
     entrants = []
     scores = []
@@ -49,7 +49,7 @@ def scrape_crossfit(count=False):
     if count:
         counter = Counter(name='Scraping Crossfit Games', stderr=True)
     while pages:
-        
+
         page = requests.get(URL.format(params=urllib.parse.urlencode(PARAMS)))
         if page.status_code == 200:
             try:
