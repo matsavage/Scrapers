@@ -83,8 +83,8 @@ def main():
     '''Perform scrape and write output to file'''
     entrants, scores = scrape_crossfit(count=True)
     file = os.path.join(PATH, '{filename}-{date:%Y-%M-%D}.pickle')
-    entrants.to_pickle(file.format(filename='entrants', date=datetime()))
-    scores.to_pickle(file.format(filename='scores', date=datetime()))
+    entrants.to_pickle(file.format(filename='entrants', date=datetime.now()))
+    scores.to_pickle(file.format(filename='scores', date=datetime.now()))
 
 
 if __name__ == '__main__':
